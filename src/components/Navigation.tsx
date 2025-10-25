@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: "Newsletters", href: "#newsletters" },
     { name: "Eco Products", href: "#products" },
     { name: "Media", href: "#media" },
+    { name: "Team", href: "#team" },
     { name: "Contact Us", href: "#contact" },
   ];
 
