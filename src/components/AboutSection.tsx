@@ -7,33 +7,33 @@ const AboutSection = () => {
   const whyChooseUs = [
     {
       icon: <Leaf className="w-8 h-8" />,
-      title: "100% Natural",
-      description: "All products made from pure natural ingredients"
+      title: "🌿 100% Tabiiy Mahsulotlar",
+      description: "Barcha mahsulotlar sof tabiiy ingredientlardan tayyorlangan"
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Quality Certified",
-      description: "International quality standards and certifications"
+      title: "🏅 Sifatga Ishonch",
+      description: "Xalqaro sertifikatlar va yuqori sifat standartlari bilan kafolatlangan mahsulotlar."
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Global Presence",
-      description: "Operating in 30+ countries worldwide"
+      title: "🌍 Dunyo Bo‘ylab Faoliyat",
+      description: "30+ mamlakatda faoliyat yuritamiz – siz bizning global oilamizning bir qismisiz!"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "300K+ Partners",
-      description: "Trusted by partners globally"
+      title: "🤝 300,000+ Hamkor",
+      description: "Dunyo bo‘ylab millionlab mijozlar va hamkorlarimiz bizga ishonadi."
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "$10B Goal",
-      description: "Annual sales target demonstrating our growth"
+      title: "💰 $10B Maqsad",
+      description: "Yillik savdo o‘sishi bilan biz doimo rivojlanamiz va yangi imkoniyatlar yaratamiz."
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
-      title: "6,000+ Products",
-      description: "Diverse range across multiple categories"
+      title: "🛒 6,000+ Mahsulot",
+      description: "Har xil ehtiyoj va did uchun keng assortiment – siz xohlaganingizni topasiz!"
     }
   ];
 
@@ -42,11 +42,11 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About Greenleaf
+          Biz Kimmiz?
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            An international brand founded on naturalness, healthy living, and environmental purity
+            Tabiiylik, sog‘lom hayot va atrof-muhit tozaligi asosida yaratilgan xalqaro brend.
           </p>
         </div>
 
@@ -62,16 +62,18 @@ const AboutSection = () => {
                 />
               </div>
               <CardContent className="p-8 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Company</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Kompaniya haqida</h3>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
-                  Компания Сучжоу Дэйли Коммодити Ко. (Suzhou Greenleaf Daily Commodity Co. Ltd) 
-                  расположена в индустриальном парке Шу Гуан в национальной высокотехнологичной зоне Сучжоу
+                 Greenleaf (Suzhou Greenleaf Daily Commodity Co. Ltd) — tabiat bilan uyg‘unlikda yashash falsafasiga asoslangan xalqaro brend bo‘lib, uning bosh ofisi Xitoyning Sujou shahridagi Shu Gvan sanoat parkida, milliy yuqori texnologiyalar zonasida joylashgan.
+
+
                 </p>
                 <p className="text-foreground leading-relaxed">
-                  Greenleaf produces a comprehensive range of eco-friendly products including cosmetics, 
-                  perfumes, hygiene products, cleaning solutions, children's lines, clothing, and household goods. 
-                  With over 6,000 products in our portfolio, we're committed to making sustainable living 
-                  accessible to everyone.
+                 Bizning maqsadimiz — har bir oilaga sog‘lom, xavfsiz va ekologik toza mahsulotlar yetkazishdir.
+6000 dan ortiq turdagi mahsulotlarimiz orqali sizga tabiatning nafisligini, sof havosini va hayotning tiniqligini tuhfa etamiz.
+
+Greenleaf kosmetika, parfyumeriya, gigiyena vositalari, tozalovchi mahsulotlar, bolalar uchun maxsus seriyalar, kiyim-kechak hamda uy-ro‘zg‘or buyumlarini ishlab chiqaradi. <br />
+Har bir mahsulotimiz — bu tabiatga hurmat, inson salomatligiga g‘amxo‘rlik va yangilik sari intilishdir.
                 </p>
               </CardContent>
             </div>
@@ -83,13 +85,12 @@ const AboutSection = () => {
           <Card className="[background:var(--gradient-card)] border-border [box-shadow:var(--shadow-soft)]">
             <CardContent className="p-8">
               <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
-                <p className="text-2xl font-semibold text-primary mb-2">Our Mission</p>
+                <p className="text-2xl font-semibold text-primary mb-2">Bizning Missiyamiz</p>
                 <p className="text-foreground text-lg italic">
-                  "Inspired by nature, caring for life!"
+                  Tabiatdan ilhomlanib, hayotga g‘amxo‘rlik qilamiz!
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  We strive to create sustainable products that protect both people and the planet, 
-                  making eco-friendly living accessible and affordable for everyone around the world.
+             Biz odamlar va sayyorani himoya qiladigan barqaror mahsulotlar yaratishga intilamiz, ekologik toza hayotni butun dunyo bo‘ylab hamma uchun qulay va arzon qilamiz.
                 </p>
               </div>
             </CardContent>
@@ -99,7 +100,7 @@ const AboutSection = () => {
         {/* Why Choose Us */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-foreground mb-12 animate-fade-in-up [animation-delay:400ms]">
-            Why Choose Us?
+    Nima Uchun Bizni Tanlashadi?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
@@ -127,7 +128,7 @@ const AboutSection = () => {
         {/* Global Map Animation */}
         <div className="animate-fade-in-up [animation-delay:600ms]">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">
-            Our Global Presence
+          Dunyo Bo‘ylab Biz
           </h3>
           <GlobalMapSection />
         </div>

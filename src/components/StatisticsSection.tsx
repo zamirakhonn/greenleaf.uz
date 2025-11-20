@@ -17,28 +17,28 @@ const StatisticsSection = () => {
     {
       icon: <TrendingUp className="w-8 h-8" />,
       value: 10,
-      suffix: "B",
+      suffix: "B ",
       prefix: "$",
-      label: "Annual Sales Target"
+      label: "Yillik savdo maqsadimiz bilan o‘sishimizni ko‘rsatamiz"
     },
     {
       icon: <Globe className="w-8 h-8" />,
       value: 30,
       suffix: "+",
-      label: "Countries Served"
+      label: "Dunyo bo‘ylab xizmat qilinadigan mamlakatlar"
     },
     {
       icon: <Building2 className="w-8 h-8" />,
       value: 68,
       suffix: "M",
       prefix: "$",
-      label: "Industrial Park Investment"
+      label: "Sanoat parklariga sarmoya, kelajak uchun barqaror infratuzilma yaratamiz"
     },
     {
       icon: <Users className="w-8 h-8" />,
       value: 300000,
       suffix: "",
-      label: "Global Partners"
+      label: "Dunyo bo‘ylab ishonchli hamkorlarimiz"
     }
   ];
 
@@ -95,7 +95,7 @@ const StatisticsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our Impact
+        Bizning Natijalarimiz
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>

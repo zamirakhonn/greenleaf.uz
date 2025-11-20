@@ -7,13 +7,13 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Newsletters", href: "#newsletters" },
-    { name: "Eco Products", href: "#products" },
+    { name: "Asosiy", href: "#home" },
+    { name: "Biz haqimizda", href: "#about" },
+    { name: "Yangiliklar", href: "#newsletters", animated: true },
+    { name: "Eko mahsulotlar", href: "#products", animated: true },
     { name: "Media", href: "#media" },
-    { name: "Team", href: "#team" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Jamoa", href: "#team" },
+    { name: "Bog'lanish", href: "#contact", animated: true },
   ];
 
   return (
@@ -26,13 +26,25 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className={`relative inline-block px-4 py-2 font-medium transition-all duration-300 rounded-md ${
+                  item.animated
+                    ? "text-foreground group overflow-hidden hover:text-white hover:bg-primary hover:shadow-[0_0_15px_hsl(var(--primary))]"
+                    : "text-foreground hover:text-primary"
+                }`}
               >
+                {item.animated && (
+                  <>
+                    <span className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent to-primary animate-borderX" />
+                    <span className="absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b from-transparent to-primary animate-borderY_delay1" />
+                    <span className="absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-l from-transparent to-primary animate-borderX_delay2" />
+                    <span className="absolute bottom-0 left-0 w-[2px] h-full bg-gradient-to-t from-transparent to-primary animate-borderY_delay3" />
+                  </>
+                )}
                 {item.name}
               </a>
             ))}
@@ -56,9 +68,21 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-3 text-foreground hover:text-primary transition-colors font-medium"
+                className={`relative block py-3 px-4 font-medium transition-all duration-300 rounded-md ${
+                  item.animated
+                    ? "text-foreground group overflow-hidden hover:text-white hover:bg-primary hover:shadow-[0_0_15px_hsl(var(--primary))]"
+                    : "text-foreground hover:text-primary"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
+                {item.animated && (
+                  <>
+                    <span className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent to-primary animate-borderX" />
+                    <span className="absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b from-transparent to-primary animate-borderY_delay1" />
+                    <span className="absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-l from-transparent to-primary animate-borderX_delay2" />
+                    <span className="absolute bottom-0 left-0 w-[2px] h-full bg-gradient-to-t from-transparent to-primary animate-borderY_delay3" />
+                  </>
+                )}
                 {item.name}
               </a>
             ))}

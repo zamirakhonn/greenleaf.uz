@@ -1,19 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 const TeamSection = () => {
   const team = [
     {
-      name: "Sarah Mitchell",
-      role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop",
-      bio: "Passionate about sustainable living and environmental conservation"
+      name: "Movluda Asqarxo‘jayeva",
+      role: "Ijrochi direktor",
+      image: "https://uzreport.news/fotobank/image/f2bf5f1d9f1dc66073e3e2eb79b0aba9.jpeg",
+      bio: "Barqaror hayot va atrof-muhitni muhofaza qilishga ishtiyoqli yetakchi"
     },
     {
-      name: "David Chen",
-      role: "Chief Product Officer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop",
-      bio: "Expert in eco-friendly product development and innovation"
+      name: "Mohibonu Xudaynazarova ",
+      role: "Marketolog, biznes mentor",
+      image: "/images/team/mohibonu.png",
+      bio: "Liderlik — bu biznesning yuragi. Maqsadim — har bir insonni o‘z liderlik cho‘qqisiga olib chiqish"
     },
     {
       name: "Emma Rodriguez",
@@ -34,11 +34,11 @@ const TeamSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Meet Our Team
+           Bizning Jamoamiz
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The passionate people behind Greenleaf's mission for a sustainable future
+          Greenleaf’ning barqaror kelajagi uchun ishlaydigan ishtiyoqli jamoa
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const TeamSection = () => {
                     <Linkedin className="w-5 h-5" />
                   </button>
                   <button className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground hover:bg-primary/90 transition-colors">
-                    <Mail className="w-5 h-5" />
+                    <Instagram className="w-5 h-5" />
                   </button>
                 </div>
               </div>
