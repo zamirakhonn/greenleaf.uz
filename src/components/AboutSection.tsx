@@ -2,6 +2,7 @@ import { Heart, Leaf, Globe, Sparkles, Award, Users, Target } from "lucide-react
 import { Card, CardContent } from "@/components/ui/card";
 import buildingImage from "@/assets/greenleaf-building.png";
 import GlobalMapSection from "./GlobalMapSection";
+import BrandsSlider from "./BrandSlider"; // <<--- ADDED
 
 const AboutSection = () => {
   const whyChooseUs = [
@@ -40,9 +41,11 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
+
+        {/* Title */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-          Biz Kimmiz?
+            Biz Kimmiz?
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -50,7 +53,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Company Info with Building Image */}
+        {/* Company Info */}
         <div className="max-w-6xl mx-auto mb-16 animate-fade-in-up [animation-delay:200ms]">
           <Card className="overflow-hidden [background:var(--gradient-card)] border-border [box-shadow:var(--shadow-soft)]">
             <div className="grid md:grid-cols-2 gap-0">
@@ -64,16 +67,10 @@ const AboutSection = () => {
               <CardContent className="p-8 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Kompaniya haqida</h3>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
-                 Greenleaf (Suzhou Greenleaf Daily Commodity Co. Ltd) — tabiat bilan uyg‘unlikda yashash falsafasiga asoslangan xalqaro brend bo‘lib, uning bosh ofisi Xitoyning Sujou shahridagi Shu Gvan sanoat parkida, milliy yuqori texnologiyalar zonasida joylashgan.
-
-
+                  Greenleaf (Suzhou Greenleaf Daily Commodity Co. Ltd) — tabiat bilan uyg‘unlikda yashash falsafasiga asoslangan xalqaro brend...
                 </p>
                 <p className="text-foreground leading-relaxed">
-                 Bizning maqsadimiz — har bir oilaga sog‘lom, xavfsiz va ekologik toza mahsulotlar yetkazishdir.
-6000 dan ortiq turdagi mahsulotlarimiz orqali sizga tabiatning nafisligini, sof havosini va hayotning tiniqligini tuhfa etamiz.
-
-Greenleaf kosmetika, parfyumeriya, gigiyena vositalari, tozalovchi mahsulotlar, bolalar uchun maxsus seriyalar, kiyim-kechak hamda uy-ro‘zg‘or buyumlarini ishlab chiqaradi. <br />
-Har bir mahsulotimiz — bu tabiatga hurmat, inson salomatligiga g‘amxo‘rlik va yangilik sari intilishdir.
+                  Bizning maqsadimiz — har bir oilaga sog‘lom, xavfsiz va ekologik toza mahsulotlar yetkazishdir...
                 </p>
               </CardContent>
             </div>
@@ -90,21 +87,24 @@ Har bir mahsulotimiz — bu tabiatga hurmat, inson salomatligiga g‘amxo‘rlik
                   Tabiatdan ilhomlanib, hayotga g‘amxo‘rlik qilamiz!
                 </p>
                 <p className="text-muted-foreground mt-4">
-             Biz odamlar va sayyorani himoya qiladigan barqaror mahsulotlar yaratishga intilamiz, ekologik toza hayotni butun dunyo bo‘ylab hamma uchun qulay va arzon qilamiz.
+                  Biz ekologik toza hayotni ommalashtirishga intilamiz...
                 </p>
               </div>
             </CardContent>
           </Card>
         </div>
 
+        {/* ⭐ ADDED BRANDS SLIDER HERE */}
+        <BrandsSlider />
+
         {/* Why Choose Us */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-foreground mb-12 animate-fade-in-up [animation-delay:400ms]">
-    Nima Uchun Bizni Tanlashadi?
+            Nima Uchun Bizni Tanlashadi?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
-              <Card 
+              <Card
                 key={item.title}
                 className="[background:var(--gradient-card)] border-border hover:[box-shadow:var(--shadow-hover)] transition-all duration-300 hover:-translate-y-2 animate-scale-in"
                 style={{ animationDelay: `${(index + 4) * 100}ms` }}
@@ -125,10 +125,10 @@ Har bir mahsulotimiz — bu tabiatga hurmat, inson salomatligiga g‘amxo‘rlik
           </div>
         </div>
 
-        {/* Global Map Animation */}
+        {/* Global Map */}
         <div className="animate-fade-in-up [animation-delay:600ms]">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">
-          Dunyo Bo‘ylab Biz
+            Dunyo Bo‘ylab Biz
           </h3>
           <GlobalMapSection />
         </div>

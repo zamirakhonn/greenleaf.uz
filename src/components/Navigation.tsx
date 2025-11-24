@@ -14,6 +14,7 @@ const Navigation = () => {
     { name: "Media", href: "#media" },
     { name: "Jamoa", href: "#team" },
     { name: "Bog'lanish", href: "#contact", animated: true },
+    { name: ""}
   ];
 
   return (

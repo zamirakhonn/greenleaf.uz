@@ -7,19 +7,19 @@ const MediaSection = () => {
       title: "Greenleaf Expands to New Markets",
       date: "March 2024",
       description: "Our eco-friendly products are now available in 5 new countries across Asia and Europe.",
-      image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=500"
+      image: "https://media.istockphoto.com/id/1850391734/photo/group-of-middle-aged-friends-posing-for-the-camera-happily-celebrating-their-holidays.jpg?s=612x612&w=0&k=20&c=2mazVAYSz39fURp55A4LjsOOPidV2vVLt2ycu0sueb0="
     },
     {
       title: "Sustainability Award 2024",
       date: "February 2024",
       description: "Greenleaf receives international recognition for environmental innovation.",
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500"
+      image: "https://static.barcelo.com/content/dam/bpt/posts/2024/10/stopover-in-dubai_dubai-by-night.jpg"
     },
     {
       title: "New Product Line Launch",
       date: "January 2024",
       description: "Introducing our latest eco-friendly cosmetics collection.",
-      image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500"
+      image: "https://dth.travel/wp-content/uploads/2023/10/beautiful-yuyuan-garden-at-nighttraditional-shopping-area-in-shanghai-China_shutterstock_150349577.jpg"
     }
   ];
 

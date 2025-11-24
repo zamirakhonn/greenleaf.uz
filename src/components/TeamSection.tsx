@@ -12,13 +12,13 @@ const TeamSection = () => {
     {
       name: "Mohibonu Xudaynazarova ",
       role: "Marketolog, biznes mentor",
-      image: "/images/team/mohibonu.png",
+      image: "/images/team/2.jpg",
       bio: "Liderlik — bu biznesning yuragi. Maqsadim — har bir insonni o‘z liderlik cho‘qqisiga olib chiqish"
     },
     {
       name: "Emma Rodriguez",
       role: "Head of Sustainability",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop",
+      image: "/images/team/3.jpg",
       bio: "Leading our mission for a greener, healthier planet"
     },
     {
@@ -49,7 +49,7 @@ const TeamSection = () => {
               className="overflow-hidden [background:var(--gradient-card)] border-border hover:[box-shadow:var(--shadow-hover)] transition-all duration-300 hover:-translate-y-2 animate-scale-in group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-84 overflow-hidden">
                 <img 
                   src={member.image} 
                   alt={member.name}

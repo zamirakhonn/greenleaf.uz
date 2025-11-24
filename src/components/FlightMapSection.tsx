@@ -13,7 +13,6 @@ const FlightMapSection = () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    // Flight routes
     const routes = [
       { from: { x: 0.1, y: 0.3 }, to: { x: 0.5, y: 0.3 }, progress: 0 },
       { from: { x: 0.5, y: 0.3 }, to: { x: 0.8, y: 0.4 }, progress: 0 },
@@ -31,8 +30,7 @@ const FlightMapSection = () => {
         const toX = route.to.x * canvas.width;
         const toY = route.to.y * canvas.height;
 
-        // Draw route line
-        ctx.strokeStyle = "rgba(59, 130, 246, 0.2)";
+        ctx.strokeStyle = "rgba(59, 130, 246, 0.4)";
         ctx.lineWidth = 2;
         ctx.setLineDash([5, 5]);
         ctx.beginPath();
@@ -41,11 +39,9 @@ const FlightMapSection = () => {
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // Draw moving plane
         const planeX = fromX + (toX - fromX) * route.progress;
         const planeY = fromY + (toY - fromY) * route.progress;
 
-        // Draw plane (simple triangle)
         ctx.fillStyle = "#3b82f6";
         ctx.save();
         ctx.translate(planeX, planeY);
@@ -59,58 +55,37 @@ const FlightMapSection = () => {
         ctx.fill();
         ctx.restore();
 
-        // Update progress
         route.progress += 0.005;
-        if (route.progress > 1) {
-          route.progress = 0;
-        }
-      });
-
-      // Draw airport markers
-      const airports = [
-        ...routes.map(r => r.from),
-        ...routes.map(r => r.to),
-      ];
-
-      airports.forEach((airport) => {
-        const x = airport.x * canvas.width;
-        const y = airport.y * canvas.height;
-
-        ctx.fillStyle = "#3b82f6";
-        ctx.beginPath();
-        ctx.arc(x, y, 6, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.strokeStyle = "#3b82f6";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(x, y, 12, 0, Math.PI * 2);
-        ctx.stroke();
+        if (route.progress > 1) route.progress = 0;
       });
 
       animationFrame = requestAnimationFrame(animate);
     };
 
     animate();
-
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
+    return () => cancelAnimationFrame(animationFrame);
   }, []);
 
   return (
-    <div className="relative w-full h-[500px] rounded-lg overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
+    <div className="relative w-full h-[600px] rounded-lg overflow-hidden">
+
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Canvas – now transparent and above video */}
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
-        style={{ width: "100%", height: "100%" }}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ background: "transparent" }}
       />
-      <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm p-4 rounded-lg">
-        <h3 className="text-xl font-bold text-foreground mb-1">Global Distribution Network</h3>
-        <p className="text-sm text-muted-foreground">Delivering eco-friendly products worldwide</p>
-      </div>
     </div>
   );
 };
